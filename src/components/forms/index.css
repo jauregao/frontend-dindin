@@ -1,0 +1,112 @@
+.form-dad {
+  background-color: var(--white);
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--purple);
+
+  width: 500px;
+  height: max-content;
+
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 5px;
+
+  color: var(--text-dark);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input:not([type="submit"]) {
+  height: 60px;
+  border-radius: 5px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  
+  padding: 0 15px;
+  font-size: 18px;
+
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+
+  font-size: 14px;
+  color: var(--white);
+
+  background-color: var(--purple);
+  padding: 15px 40px;
+
+  border: none;
+
+  transition: all linear 100ms;
+
+  font-weight: bold;
+
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover{
+  opacity: 0.8;
+}
+
+.form-dad p {
+  text-align: center;
+  transition: all linear 100ms;
+  font-size: 14px;
+  font-weight: bold;
+}
+.form-dad p:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 0;
+}
+
+input:-webkit-autofill {
+  background-color: #ffffff !important; 
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+input:-moz-autofill {
+  background-color: #ffffff !important; 
+  color: #000000 !important; 
+}
+
+input:-ms-autofill {
+  background-color: #ffffff !important; 
+  color: #000000 !important;
+}
+
+input:not([type="submit"]):-webkit-autofill,
+input:not([type="submit"]):-moz-autofill,
+input:not([type="submit"]):-ms-autofill {
+  background-color: #ffffff !important; 
+  color: #000000 !important; 
+}
+
+
