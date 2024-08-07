@@ -1,0 +1,46 @@
+.highlight {
+  color: var(--purple);
+}
+
+.login-txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login-txt h1 {
+  font-size: 52px;
+  color: var(--white);
+  margin: 10px 0;
+}
+
+.login-txt p {
+  font-size: 28px;
+}
+
+.login-txt a {
+  margin-top: 12px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+  color: var(--white);
+
+  background-color: var(--purple);
+  padding: 15px 80px;
+
+  border: none;
+
+  transition: all linear 100ms;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  width: max-content;
+}
+
+.login-txt a:hover {
+  opacity: 0.8;
+}
+
