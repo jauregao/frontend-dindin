@@ -7,6 +7,7 @@ interface ProtectedRoutesProps {
 
 function ProtectedRoutes({ redirectTo }: ProtectedRoutesProps) {
   const { handleGetToken } = useAuth();
+  //momentaneamente desprotegendo as rotas
   return handleGetToken() ? <Outlet /> : <Navigate to={redirectTo} />;
 }
 

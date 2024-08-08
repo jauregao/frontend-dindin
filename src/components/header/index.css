@@ -22,6 +22,8 @@
 .user-icon {
   width: 44px;
   height: 44px;
+
+  cursor: pointer;
 }
 
 .user-name{
@@ -32,4 +34,6 @@
 .logout {
   width: 24px;
   height: 32px;
+
+  cursor: pointer;
 }

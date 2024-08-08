@@ -4,6 +4,7 @@ import { useState } from "react";
 import useUser from '../../hooks/useUser'
 import useAuth from '../../hooks/useAuth'
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   title: string;
@@ -15,6 +16,8 @@ type FormValues = {
 };
 
 export default function SignInForm({ title }: Props) {
+
+  const navigate = useNavigate();
 
   const { handleInsertUser } = useUser()
   const { handleAddToken } = useAuth()
@@ -29,15 +32,14 @@ export default function SignInForm({ title }: Props) {
         setFormError('Email ou senha incorretos.');
         setTimeout(() => {
           setFormError(null); 
-          setValue("email", "");
-          setValue("senha", "");
+          reset();
         }, 2000);
         return
       }
         const { usuario, token } = data; 
           handleInsertUser(usuario);
           handleAddToken(token);
-          reset();
+          navigate('/');
         return
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {

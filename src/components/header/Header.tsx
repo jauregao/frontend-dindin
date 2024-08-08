@@ -1,4 +1,5 @@
-import handleClearToken from '../../hooks/useAuth'
+import { useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth'
 
 type IProps = {
   isLogged: boolean;
@@ -7,12 +8,16 @@ type IProps = {
 
 export default function Header({isLogged, name}: IProps) {
 
+  const navigate = useNavigate();
+  const { handleClearToken } = useAuth()
+
   function handleOpenModal() {
     //todo
   }
 
   function handleLogout() {
-    handleClearToken()
+    handleClearToken();
+    navigate('/sign-in');
   }
 
   return (
