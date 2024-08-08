@@ -4,9 +4,32 @@
   display: flex;
   width: 1240px;
   max-height: fit-content;
-  justify-content: start;
 
   padding: 30px 0;
 
   justify-self: start;
+}
+
+.login-icons {
+  display: flex;
+  width: 50%;
+  width: fit-content;
+
+  align-items: center;
+  gap: 15px;
+}
+
+.user-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.user-name{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logout {
+  width: 24px;
+  height: 32px;
 }

@@ -1,0 +1,30 @@
+.home {
+  width: 100%;
+  height: fit-content;
+}
+
+.gradiente {
+  width: 100%;
+  height: 200px;
+  
+  background: linear-gradient(to right, #05EDE3, #645FFB);
+}
+
+.main-background {
+  background-color: var(--white);
+  height: calc(100vh - 110px);
+
+  margin-top: -90px;
+
+  border-radius: 60px 60px 0 0;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard h1 {
+  color: #000;
+}
