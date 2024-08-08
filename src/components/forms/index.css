@@ -109,4 +109,8 @@ input:not([type="submit"]):-ms-autofill {
   color: #000000 !important; 
 }
 
+.form-error {
+  color: red;
+  margin: 0;
+}
 
