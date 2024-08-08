@@ -23,12 +23,12 @@ export default function SignInForm({ title }: Props) {
   const { handleAddToken } = useAuth()
   const [formError, setFormError] = useState<string | null >(null);
 
-  const { register, handleSubmit, reset, setValue } = useForm<FormValues>();
+  const { register, handleSubmit, reset } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (formData) => {
     try {
       const { data, status } = await api.post('/login', formData);
+      
       if(status !== 200) {
-        
         setFormError('Email ou senha incorretos.');
         setTimeout(() => {
           setFormError(null); 
@@ -53,8 +53,7 @@ export default function SignInForm({ title }: Props) {
       }
       setTimeout(() => {
         setFormError(null); 
-        setValue("email", "");
-        setValue("senha", "");
+        reset()
       }, 2000);
     };
 }
