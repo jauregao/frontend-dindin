@@ -1,31 +1,14 @@
-import { useEffect, useState } from "react"
-import api from "../../services/api"
-import useAuth from "../../hooks/useAuth"
 import { Transacao } from "../../types/transaction"
 import { formatDate } from "../../utils/formatDate"
+import { formatValue } from "../../utils/formatValue";
 
-export default function Table(){
-  const { handleGetToken } = useAuth()
-  const [transactions, setTransactions] = useState<Transacao []>([])
+interface TableProps {
+  transactions: Transacao[];
+}
 
+export default function Table({ transactions }: TableProps){
   function handleEditIcon () {}
   function handleDeleteIcon () {}
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const token = handleGetToken();
-
-        const responseTran = await api.get("/transacao", {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-
-        setTransactions(responseTran.data);
-      } catch (error) {
-        console.error("Erro ao buscar transações:", error);
-      }
-    })();
-  }, []);
 
   return (
     <table className="table">
@@ -47,7 +30,7 @@ export default function Table(){
             <td>{formatDate(transaction.data).formattedWeekDay}</td>
             <td>{transaction.descricao}</td>
             <td>{transaction.categoria_nome}</td>
-            <td>{transaction.valor}</td>
+            <td>{formatValue(transaction.valor)}</td>
             <td className="icons">
               <img src="/editar.svg" alt="icone editar" onClick={ handleEditIcon }/>
               <img src="/remover.svg" alt="icone excluir" onClick={ handleDeleteIcon }/>

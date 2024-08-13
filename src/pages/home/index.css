@@ -23,18 +23,29 @@
 
   display: flex;
   justify-content: center;
+
+  padding: 60px 0;
 }
 
 .dashboard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 
   width: 100%;
   height: 100%;
+
+  gap: 35px;
 }
 
 .dashboard h1 {
   color: #000;
+}
+
+.table-resume {
+  flex: 2;
+}
+
+.table-rows {
+  flex: 6;
 }

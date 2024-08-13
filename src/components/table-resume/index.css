@@ -1,0 +1,58 @@
+.resume-bg {
+  border-radius: 10px;
+  background-color: #FAFAFA;
+
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+
+  padding: 20px;
+}
+
+h2 {
+  padding: 0 10px;
+  font-size: 18px
+}
+
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10px;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.total-row {
+  margin-top: 15px;
+  border-top: 1px solid #ddd; 
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add {
+  margin-top: 12px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+  color: var(--white);
+
+  background-color: var(--purple);
+  padding: 15px 80px;
+
+  border: none;
+
+  transition: all linear 100ms;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  width: 100%;
+}
+
+.add:hover {
+  opacity: 0.8;
+}

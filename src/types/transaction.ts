@@ -9,7 +9,7 @@ export type Transacao = {
   categoria_nome: string;
 };
 
-enum ETipo {
+export enum ETipo {
   entrada = "entrada",
   saida = "saida"
 }
